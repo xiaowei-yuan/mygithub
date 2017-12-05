@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">			
+			h2{
+				background-color: #dedede;
+				border-bottom: 1px solid #d4d4d4;
+				border-top: 1px solid #d4d4d4;
+				border-radius: 5px;
+				box-shadow: 3px 3px 3px #ccc;
+				color: #fff;
+				font-size: 1.1em;
+				margin: 12px;
+				padding: 0.3em 1em;
+				text-shadow: #9fbeb9 1px 1px 1px;
+				text-transform: uppercase;				
+			}			
+			.hdr-account{
+				background-color: #0b5586;
+			}	
+			.hdr-address{
+				background-color: #4494c9;
+			}		
+			.hdr-public-profile{
+				background-color: #377d87;
+			}
+			.hdr-emails{
+				background-color: #717f88;
+			}
+			fieldset{
+				background-color: #f1f1f1;
+				border: none;
+				border-radius: 2px;
+				margin-bottom: 12px;
+				overflow: hidden;
+				padding: 10px;				
+			}			
+			.fields{
+				background-color: #fff;
+				border: 1px solid #eaeaea;
+				margin: 12px;
+				padding: 12px;
+			}			
+			.fields .row{
+				margin: 0.5em 0;
+			}			
+			label{
+				cursor: pointer;
+				display: inline-block;
+				padding: 3px 6px;
+				text-align: right;
+				width: 150px;
+				vertical-align: top;
+			}
+			input,select,button{
+				font-size: inherit;
+			}		
+			.field-large{
+				width: 250px;				
+			}
+			
+			.instructions{
+				font-size: .75em;
+				padding-left: 167px;
+				font-style: italic;
+				margin: .5em 0 1.2em;
+			}
+			
+			.instructions kbd{
+				font-size: 1.23em;
+				font-style: normal;
+			}
+			.checkboxes label {
+	text-align: left;
+	width: 475px;
+}
+
+			.radios {
+	background-color: transparent;
+	position: relative;
+	margin-bottom: 0;
+}
+
+		.radios .row {
+	margin: 0 0 0 150px;
+}
+
+		.radios legend {
+	left: 0;
+	padding: 0 6px;
+	position: absolute;
+	text-align: right;
+	top: 2px;
+	width: 148px;
+	*width: 143px; /* a hack for IE7 */
+}
+.btn {
+	background-color: #da820a;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px #333;
+	color: #fff;
+	margin: 12px 0 0 26px;
+	padding: 8px;
+	text-shadow: 1px 1px 0px #777;
+}
+
+.btn-reset {
+	background-color: #8e5303;
+	color: #eee;
+	margin-left: 35px;
+}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Create a New Account </h1><a href="i.html"><input type="submit" value="Return" class="btn" /></a>
+			<form method="post" action="" enctype="multipart/form-data">
+				<fieldset>
+					<h2 class="hdr-account">Account</h2>
+					<div class="fields">
+						<p class="row">
+							<label for="first-name">First Name:</label>
+							<input type="text" id="first-name" name="first-name" class="field-large" required autofocus/>
+						</p>					
+						<p class="row">
+							<label for="last-name">Last Name:</label>
+							<input type="text" id="last-name" name="last-name" class="field-large" />
+						</p>
+						<p class="row">
+							<label for="password">Password:</label>
+							<input type="password" id="password" name="password" class="field-large" />
+						</p>					
+						<p class="row">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" class="field-large" placeholder="yourname@example.com"/>
+						</p>
+						
+						<div class="row">
+							<label for="website">Website URL:</label>
+							<input type="url" id="website" name="website" class="field-large" placeholder="http://www.example.com"/>
+							<p class="instructions">
+								Have a site or a blog?Put the address here,beginning with <kbd>http://</kbd> or <kbd>https://</kbd>.
+							</p>
+						</div>
+						<p class="row">
+							<label for="phone">Phone:</label>
+							<input type="tel" id="phone" name="phone" class="field-large" placeholder="xxx-xxx-xxxx" pattern="\d(3)-\d(3)-\d(4)"/>
+						</p>											
+					</div>
+				</fieldset>				
+				<fieldset>
+					<h2 class="hdr-address">Address</h2>			
+				</fieldset>
+				<div class="fields">
+				  <div class="row">
+				    <label for="street-address">Street Address:</label>
+				    <input type="text" id="street-address" name="street_address" class="field-large" />
+			      </div>
+				  <div class="row">
+				    <label for="city">City:</label>
+				    <input type="text" id="city" name="city" class="field-large" />
+			      </div>
+				  <div class="row">
+				    <label for="state">State:</label>
+				    <select id="state" name="state">
+				      <option value="AL">Alabama</option>
+				      <option value="AK">Alaska</option>
+				      <option value="CA">California</option>
+				      <option value="CO">Colorado</option>
+			        </select>
+			      </div>
+				  <div class="row">
+				    <label for="zip-code">ZIP Code:</label>
+				    <input type="text" id="zip-code" name="zip_code" class="field-small" />
+			      </div>
+			  </div>
+				<fieldset>
+				  <h2 class="hdr-public-profile">Public Profile</h2>					
+				</fieldset>
+				<div class="fields">
+				  <div class="row">
+				    <label for="picture">Picture:</label>
+				    <input type="file" id="picture" name="picture" />
+				    <p class="instructions">Maximum size of 700k. JPG, GIF or PNG.</p>
+			      </div>
+				  <p class="row">
+				    <label for="screen-name">Screen Name:</label>
+				    <input type="text" id="screen-name" name="screen_name" class="field-medium" />
+			      </p>
+				  <div class="row">
+				    <label for="website2">Website URL:</label>
+				    <input type="url" id="website2" name="website2" placeholder="http://www.example.com" class="field-large" />
+				    <p class="instructions">Have a homepage or a blog? Put the address here, <br />
+				      beginning with <kbd>http://</kbd> or <kbd>https://</kbd>.</p>
+			      </div>
+				  <p class="row">
+				    <label for="bio">Bio:</label>
+				    <textarea id="bio" name="bio" cols="40" rows="5" class="field-large"></textarea>
+			      </p>
+				  <div class="row">
+				    <fieldset class="radios">
+				      <legend>Gender:</legend>
+				      <p class="row">
+				        <input type="radio" id="gender-male" name="gender" value="male" />
+				        <label for="gender-male">Male</label>
+			          </p>
+				      <p class="row">
+				        <input type="radio" id="gender-female" name="gender" value="female" />
+				        <label for="gender-female">Female</label>
+			          </p>
+			        </fieldset>
+			      </div>
+			  </div>
+				<fieldset>
+			<h2 class="hdr-emails">Emails</h2>
+			<div class="fields checkboxes">
+				<div class="row">
+					<input type="checkbox" id="email-ok-msg-from-users" name="email_signup[]" value="user-emails" />
+					<label for="email-ok-msg-from-users">It is okay to email me with messages from other users.</label>
+				</div>
+				<div class="row">
+					<input type="checkbox" id="email-ok-occasional-updates" name="email_signup[]" value="occasional-updates" />
+					<label for="email-ok-occasional-updates">It is okay to email me with occasional promotions about our other products.</label>
+				</div>    			
+			</div>
+		</fieldset>
+				<input type="submit" value="Create Accout" class="btn" />
+			</form>			
+		</main>
+        <br>
+
+        <footer>
+			<div class="end1">
+				<p>Copyright &copy;2016 WD All Rights Reserved. </p>
+			</div>
+		</footer>
+
+	</body>
+</html>
